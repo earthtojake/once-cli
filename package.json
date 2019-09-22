@@ -16,8 +16,7 @@
   },
   "standard": {
     "ignore": [
-      "**/example/**",
-      "**/node_modules/**"
+      "**/example/**"
     ]
   },
   "keywords": [
