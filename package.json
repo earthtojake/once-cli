@@ -1,0 +1,34 @@
+{
+  "name": "once",
+  "version": "1.0.0",
+  "description": "no-nonsense scripting to support your applications with babel-node and yargs",
+  "dependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.1",
+    "@babel/preset-env": "^7.6.0",
+    "yargs": "^14.0.0"
+  },
+  "main": "./bin/index.js",
+  "bin": {
+    "once": "./bin/index.js"
+  },
+  "standard": {
+    "ignore": [
+      "**/example/**"
+    ]
+  },
+  "keywords": [
+    "babel",
+    "yargs",
+    "scripting",
+    "script",
+    "cli",
+    "command",
+    "parser",
+    "parsing"
+  ],
+  "license": "MIT",
+  "engine": {
+    "node": ">=7.6"
+  }
+}
