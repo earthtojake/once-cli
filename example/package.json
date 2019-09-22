@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "once": "once",
-    "once-init": "once-init",
-    "once-new": "once-new"
+    "once": "once"
   },
   "keywords": [],
   "author": "",
