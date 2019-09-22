@@ -1,5 +1,9 @@
 # once
+<<<<<<< HEAD
 No-nonsense, instant setup scripting to support your projects. Scripts are configured with [babel-node](https://babeljs.io/docs/en/babel-node) and [yargs](http://yargs.js.org/) out of the box so that you can start scripting in minutes.
+=======
+No-nonsense, instant setup scripting to support your applications. Scripts are configured with [babel-node](https://babeljs.io/docs/en/babel-node) and [yargs](http://yargs.js.org/) out of the box so that you can start scripting in minutes.
+>>>>>>> 5abbfdb139d8c4675453acfddaa00d9d76462467
 
 ## Setup
 
@@ -75,6 +79,7 @@ export default async (argv) => {
 
 ```
 
+<<<<<<< HEAD
 A parsed "argv" (command line arguments) is passed into the script function as an object. These arguments are parsed using [yargs](http://yargs.js.org/) default parsing. To customise this parsing, add an additional export to your script file called `argv`:
 
 ```
@@ -84,14 +89,29 @@ export const argv = (yargs) => yargs.boolean(...).usage(...)
 
 export default async (argv) => {
 
+=======
+A parsed "argv" (command line arguments) is passed into the script function as an object. These arguments are parsed using [yargs'](http://yargs.js.org/) default parsing. To customise this parsing, add an additional export to your script file called `argv`:
+
+```
+// example script file with custom yargs config
+
+export const argv = (yargs) => yargs.boolean(...).usage(...)
+
+export default async (argv) => {
+
+>>>>>>> 5abbfdb139d8c4675453acfddaa00d9d76462467
   // script goes here
 
 }
 ```
 
+<<<<<<< HEAD
 _Note: Do not end your `yargs` config with `.argv` such as `yargs.boolean(...).argv`, as outlined in the docs. `once` appends its own parsing to your config, so this needs to be left open._
 
 A complete example of a script is shown below:
+=======
+A complete example of a script file is shown below:
+>>>>>>> 5abbfdb139d8c4675453acfddaa00d9d76462467
 
 ```
 // custom yargs config (see http://yargs.js.org/)
