@@ -22,19 +22,18 @@ Create a `./once` directory in the root folder of your application:
 -- package.json
 ```
 
-### Execute
-The files in this directory can be executed via the command line by filename:
+The files in your `once` directory can be executed via the command line by their filename:
 
 `once <file_name> <arg1> <arg2> ...`
 
-`once script.js`
+`once script`
 
-`once scriptWithArgs.js --key1=val1 --key2=val2`
+`once scriptWithArgs --key1=val1 --key2=val2`
 
-`once nested/script.js --arg1 --arg2`
+`once nested/script --arg1 --arg2`
 
 ### Scripts
-The default export function in script files is executed with `once` and can be sync or async. The default yargs config is used to parse command line arguments, but can be customised with an exported function `argv: (yargs) => yargs.boolean(...)`. An example of a script file which counts to 10 is shown below:
+The default export function in script files is executed with `once` and can be sync or async. The command line arguments are passed into the script function as an object. These arguments are parsed using yargs' default parsing, but this parsing can be customised with an additional exported function `argv: (yargs) => yargs.boolean(...)` in the script file. An example of a script file which counts to `n` with parsed arguments is shown below:
 
 ```
 
