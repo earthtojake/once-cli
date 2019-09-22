@@ -1,5 +1,5 @@
-# once
-No-nonsense scripting to support your projects. Scripts are configured with [babel-node](https://babeljs.io/docs/en/babel-node) and [yargs](http://yargs.js.org/) out of the box so that you can start scripting in minutes.
+# Once
+A simple, fast scripting CLI for your projects. The CLI uses [babel-node](https://babeljs.io/docs/en/babel-node) and [yargs](http://yargs.js.org/) out of the box.
 
 ## Setup
 
@@ -45,7 +45,7 @@ _Note: To run `once` locally, use `yarn once <file_name> <...args>`_
 
 The `./once` target directory can be modified by adding file named `once.config.js` in your project's root directory: 
 
-```
+```javascript
 module.exports = {
   dir: "once" // change to a different folder
 }
@@ -54,17 +54,17 @@ module.exports = {
 The default babel preset for scripts is [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env). You can override this preset your own `babel.config.js` in the `once` target directory:
 
 ```
--- node_modules
--- once/
-   -- babel.config.js
--- src
--- package.json
+├── node_modules
+├── once/
+|   └── babel.config.js
+├── src
+└── package.json
 ```
 
 ### Scripts
 When running your script files, the default export function is executed. This function can be sync or async:
 
-```
+```javascript
 // example script file
 
 export default async (argv) => {
@@ -77,7 +77,7 @@ export default async (argv) => {
 
 A parsed "argv" (command line arguments) is passed into the script function as an object. These arguments are parsed using [yargs](http://yargs.js.org/) default parsing. To customise this parsing, add an additional export to your script file called `argv`:
 
-```
+```javascript
 // example script file with custom yargs config
 
 export const argv = (yargs) => yargs.boolean(...).usage(...)
@@ -93,7 +93,7 @@ _Note: Do not end your `yargs` config with `.argv` such as `yargs.boolean(...).a
 
 A complete example of a script is shown below:
 
-```
+```javascript
 // custom yargs config (see http://yargs.js.org/)
 export const argv = (yargs) => yargs
   .default('n', 10)
