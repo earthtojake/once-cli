@@ -5,17 +5,17 @@ A simple, fast scripting CLI for your projects. The CLI uses [babel-node](https:
 
 ### Global installation
 
-`yarn global add once-scripts`
+`yarn global add once-cli`
 or
-`npm i -g once-scripts`
+`npm i -g once-cli`
 
 `once init` (initialises a `once` target directory)
 
 ### Local installation
 
-`yarn add -D once-scripts`
+`yarn add -D once-cli`
 or
-`npm i --save-dev once-scripts`
+`npm i --save-dev once-cli`
 
 Add the following script to your package.json:
 
