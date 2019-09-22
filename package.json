@@ -10,12 +10,14 @@
   },
   "main": "./bin/index.js",
   "bin": {
-    "once": "./bin/index.js"
+    "once": "./bin/index.js",
+    "once-init": "./bin/init.js",
+    "once-new": "./bin/new.js"
   },
   "standard": {
     "ignore": [
       "**/example/**",
-      "node_modules/**"
+      "**/node_modules/**"
     ]
   },
   "keywords": [

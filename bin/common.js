@@ -20,3 +20,13 @@ exports.getOnceDir = () => {
   return path.resolve(projDir, onceDir)
 
 }
+
+exports.getFnJS = (_fn) => {
+
+  if (!_fn) return undefined
+  let fn = _fn
+  const ext = path.extname(fn)
+  if (!ext) fn += '.js'
+  return fn
+
+}
