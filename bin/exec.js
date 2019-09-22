@@ -1,13 +1,12 @@
 const path = require('path')
 const fs = require('fs')
 const {
-  getOnceDir
+  getOnceDir,
+  getFnJS
 } = require('./common')
 
 const args = process.argv.splice(3)
-let scriptFn = args.shift()
-const scriptFnExt = path.extname(scriptFn)
-if (!scriptFnExt) scriptFn += '.js'
+const scriptFn = getFnJS(args.shift())
 
 const onceDir = getOnceDir()
 const scriptFp = path.resolve(onceDir, scriptFn)

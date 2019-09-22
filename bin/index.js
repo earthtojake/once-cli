@@ -2,9 +2,19 @@
 const fs = require('fs')
 const path = require('path')
 const { exec } = require('child_process');
-const { getOnceDir } = require('./common')
+const { getOnceDir } = require('./common');
+const newScript = require('./new').default;
+const initOnce = require('./init').default;
 
 const args = process.argv.splice(2)
+
+if (args[0] === 'init') {
+  initOnce()
+  return
+} else if (args[0] === 'new') {
+  newScript(args[1])
+  return
+}
 
 const onceDir = getOnceDir()
 
