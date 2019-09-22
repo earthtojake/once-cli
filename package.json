@@ -1,7 +1,8 @@
 {
-  "name": "once-scripts",
-  "version": "1.0.2",
-  "description": "no-nonsense scripting to support your applications with babel-node and yargs",
+  "name": "once-cli",
+  "version": "1.0.3",
+  "private": true,
+  "description": "Fast, simple scripting CLI wrapping babel-node and yargs.",
   "dependencies": {
     "@babel/core": "^7.6.0",
     "@babel/node": "^7.6.1",
@@ -26,14 +27,15 @@
     "command",
     "parser",
     "parsing",
-    "async"
+    "async",
+    "es6"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/earthtojake/once-cli.git"
   },
   "license": "MIT",
-  "engine": {
-    "node": ">=7.6"
+  "engines": {
+    "node": ">= 8.0.0"
   }
 }
