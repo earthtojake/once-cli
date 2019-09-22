@@ -1,5 +1,5 @@
 {
-  "name": "once",
+  "name": "once-scripts",
   "version": "1.0.0",
   "description": "no-nonsense scripting to support your applications with babel-node and yargs",
   "dependencies": {
@@ -27,6 +27,10 @@
     "parser",
     "parsing"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/earthtojake/once.git"
+  },
   "license": "MIT",
   "engine": {
     "node": ">=7.6"
