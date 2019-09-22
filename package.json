@@ -1,6 +1,6 @@
 {
   "name": "once-scripts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "no-nonsense scripting to support your applications with babel-node and yargs",
   "dependencies": {
     "@babel/core": "^7.6.0",
@@ -14,7 +14,8 @@
   },
   "standard": {
     "ignore": [
-      "**/example/**"
+      "**/example/**",
+      "node_modules/**"
     ]
   },
   "keywords": [

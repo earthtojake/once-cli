@@ -1,23 +1,15 @@
-export const argv = (yargs) => yargs
-  .default('n', 10)
-  .usage('Usage: $0 -n [num]')
-  .help('h')
+export default (argv) => {
 
-export default async (argv) => {
-
-  const {n} = argv
+  const {
+    n = 10
+  } = argv
 
   console.log(`counting to ${n}`)
 
   for (let i = 1; i <= n; i++) {
 
-    await sleep(1000)
     console.log(i)
 
   }
 
-}
-
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
 }
